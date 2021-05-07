@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Roster</title>
+</head>
+<body>
+<h1>Curling Teams</h1>
+<div th:each="team, index : ${teams}">
+  <div th:object="${team}">
+    <ul>
+      <a th:href="@{/teams/} + ${index.index}"><li th:text="*{teamName}" ></li></a>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

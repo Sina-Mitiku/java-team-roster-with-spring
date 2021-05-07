@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Show</title>
+</head>
+<body>
+<div th:object="${team}">
+  <h2 th:text="*{teamName}"></h2>
+<ul>
+  <div th:each="player : ${team.players}" th:remove="tag">
+    <li th:object="${player}">
+      <p th:text="*{name} + ' : ' + *{position}"></p>
+    </li>
+  </div>
+</ul>
+</div>
+</body>
+</html>

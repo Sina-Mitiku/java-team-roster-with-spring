@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+
+<body>
+<h1>Add a New Team</h1>
+
+<form action="#" th:action="@{/}" th:object="${team}" method="POST">
+    <label th:for="teamName">Team name</label>
+    <input type="text" th:field="*{teamName}" />
+  <div>
+    <input type="submit" value="Submit team" />
+  </div>
+</form>
+</body>
+</html>
